@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css">
+    
     <!--link responsividade-->
     <link rel="stylesheet" href="./style/responsividade.css">
+    
+    <!--link modal-->
+    <link rel="stylesheet" href="./style/modal.css">
+
     <!--link owl css-->
     <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
-    <title>NETFLIC CLONE</title>
+    <title>GAMEFLIX</title>
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h2 class="logo">NETFLIX</h2>
-            <nav>
+            <h2 class="logo">
+                <i class="fas fa-gamepad"></i>GAMEFLIX</h2>
+            <nav class="nav">
                 <a href="#">Início</a>
-                <a href="#">Série</a>
-                <a href="#">Filmes</a>
-                <a href="#">Bombando</a>
+                <a href="#">Atari</a>
+                <a href="#">Top Ten</a>
                 <a href="#">Minha lista</a>
             </nav>
         </div>
@@ -30,58 +37,181 @@
         <div class="filme-principal">
             <div class="container">
                 <h3 class="titulo">
-                    <img class="logo" src="img/logo.png" alt="">
+                    <img class="logo" src="img/megaDrive/logoSonic.png" alt="">
                 </h3>
-                <p class="descricao">As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos.</p>
+                <p class="descricao">Quando o Dr. Eggman estava traçando seus planos para uma aquisição global, havia uma pequena coisa com a qual ele não contava - Sonic The Hedgehog! Nosso herói azul dispara, vira e gira através dos níveis na velocidade da luz para coletar a Esmeralda do Caos e restaurar a Ordem Mundial.</p>
                 <div class="botoes">
-                    <button role="button" class="botao">
-                        <i class="fas fa-play"></i>Assistir</button>
-                    <button role="button" class="botao">
+                    <button role="button" class="botao" onclick="jogar()">
+                        <i class="fas fa-play"></i>Jogar</button>
+                    <button role="button" class="botao" href="#" onclick="Modal.open()">
                         <i class="fas fa-info-circle"></i>Mais informações</button>
                 </div>
-            </div>
+                </div>
         </div>
     </main>
 
+    <div class="plataforma">
+        <p>Atari</p>
+    </div>
     <div class="carrosel-filmes">
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <img class="box-filme" src="img/poster1.jpg" alt="">
+        <div class="owl-carousel owl-theme" id="atari">
+            <div class="item atari adventure" >
+                <img class="box-filme" src="img/atari/adventure.png" onclick="gamesAtari.jogarAdventure()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster2.jpg" alt="">
+            <div class="item atari asteroids">
+                <img class="box-filme" src="img/atari/asteroids.jpg" onclick="gamesAtari.jogarAsteroids()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster3.jpg" alt="">
+            <div class="item atari demonAttack">
+                <img class="box-filme" src="img/atari/demonAttack.jpg" onclick="gamesAtari.jogarDemonAttack()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster4.jpg" alt="">
+            <div class="item atari enduro">
+                <img class="box-filme" src="img/atari/enduro.jpg" onclick="gamesAtari.jogarEnduro()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster5.jpg" alt="">
+            <div class="item atari et">
+                <img class="box-filme" src="img/atari/et.jpg" onclick="gamesAtari.jogarEt()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster6.jpg" alt="">
+            <div class="item atari frogger">
+                <img class="box-filme" src="img/atari/frogger.jpg" onclick="gamesAtari.jogarFrogger()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster7.jpg" alt="">
+            <div class="item atari laserBlast">
+                <img class="box-filme" src="img/atari/laserBlast.jpg" onclick="gamesAtari.jogarLaserBlast()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster8.jpg" alt="">
+            <div class="item atari missileCommand">
+                <img class="box-filme" src="img/atari/missileCommand.jpg" onclick="gamesAtari.jogarMisselCommand()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster9.jpg" alt="">
+            <div class="item atari pacMan">
+                <img class="box-filme" src="img/atari/pacMan.jpg" onclick="gamesAtari.jogarPacMan()">
             </div>
-            <div class="item">
-                <img class="box-filme" src="img/poster10.jpg" alt="">
+            <div class="item atari pitfall">
+                <img class="box-filme" src="img/atari/pitfall.jpg" onclick="gamesAtari.jogarPitfall()">
+            </div>
+            <div class="item atari riverRaid">
+                <img class="box-filme" src="img/atari/riverRaid.jpg" onclick="gamesAtari.jogarRiverRaid()">
+            </div>
+            <div class="item atari spaceInvaders">
+                <img class="box-filme" src="img/atari/spaceInvaders.jpg" onclick="gamesAtari.jogarSpaceInvaders()">
             </div>
         </div>
 
+    </div>
+
+    <div class="plataforma">
+        <p>Mega Drive</p>
+    </div>
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme" id="mega-drive">
+            <div class="item megaDrive alexKidd">
+                <img class="box-filme" src="img/megaDrive/alexKidd.jpg" onclick="gamesMegaDrive.jogarAlexKidd()">
+            </div>
+            <div class="item megaDrive comixZone">
+                <img class="box-filme" src="img/megaDrive/comixZone.jpg" onclick="gamesMegaDrive.jogarComixZone()">
+            </div>
+            <div class="item megaDrive eccoTheDolphing">
+                <img class="box-filme" src="img/megaDrive/eccoTheDolphin.jpg" onclick="gamesMegaDrive.jogarEccoTheDolphing()">
+            </div>
+            <div class="item megaDrive goldenAxe">
+                <img class="box-filme" src="img/megaDrive/goldenAxe.jpg" onclick="gamesMegaDrive.jogarGoldenAxe()">
+            </div>
+            <div class="item megaDrive kidChameleon">
+                <img class="box-filme" src="img/megaDrive/kidChamaleon.jpg" onclick="gamesMegaDrive.jogarKidChameleon()">
+            </div>
+            <div class="item megaDrive Michael">
+                <img class="box-filme" src="img/megaDrive/michael.jpg" onclick="gamesMegaDrive.jogarMichael()">
+            </div>
+            <div class="item megaDrive Mickey">
+                <img class="box-filme" src="img/megaDrive/mickey.jpg" onclick="gamesMegaDrive.jogarMickey()">
+            </div>
+            <div class="item megaDrive quackShot">
+                <img class="box-filme" src="img/megaDrive/quackshot.jpg" onclick="gamesMegaDrive.jogarQuackshot()">
+            </div>
+            <div class="item megaDrive roadRash">
+                <img class="box-filme" src="img/megaDrive/roadRash.jpg" onclick="gamesMegaDrive.jogarRoadRash()">
+            </div>
+            <div class="item megaDrive Shinobi">
+                <img class="box-filme" src="img/megaDrive/shinobi.jpg" onclick="gamesMegaDrive.jogarShinobi()">
+            </div>
+            <div class="item megaDrive Sonic">
+                <img class="box-filme" src="img/megaDrive/sonic.jpg" onclick="gamesMegaDrive.jogarSonic()">
+            </div>
+            <div class="item megaDrive streetOfRage">
+                <img class="box-filme" src="img/megaDrive/streetOfRage.jpg" onclick="gamesMegaDrive.jogarStreetOfRage()">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="plataforma">
+        <p>Super Nintendo</p>
+    </div>
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme" id="super-Nintendo">
+            <div class="item superNintendo donkeyKongCountry2">
+                <img class="box-filme" src="img/superNintendo/donkeyKongCountry2.jpg" onclick="gamesSuperNintendo.jogarDonkeyKong()">
+            </div>
+            <div class="item superNintendo doom">
+                <img class="box-filme" src="img/superNintendo/doom.jpg" onclick="gamesSuperNintendo.jogarDoom()">
+            </div>
+            <div class="item superNintendo Fzero">
+                <img class="box-filme" src="img/superNintendo/f-Zero.jpg" onclick="gamesSuperNintendo.jogarFzero()">
+            </div>
+            <div class="item superNintendo finalFight">
+                <img class="box-filme" src="img/superNintendo/finalFight.jpg" onclick="gamesSuperNintendo.jogarFinalFight()">
+            </div>
+            <div class="item superNintendo megaManX">
+                <img class="box-filme" src="img/superNintendo/megaManX.jpg" onclick="gamesSuperNintendo.jogarMegaMan()">
+            </div>
+            <div class="item superNintendo streetFighter2">
+                <img class="box-filme" src="img/superNintendo/streetFighter2.jpg" onclick="gamesSuperNintendo.jogarStreetFighter()">
+            </div>
+            <div class="item superNintendo superBomberman">
+                <img class="box-filme" src="img/superNintendo/superBomberman.jpg" onclick="gamesSuperNintendo.jogarSuperBomberman()">
+            </div>
+            <div class="item superNintendo superMarioKart">
+                <img class="box-filme" src="img/superNintendo/superMarioKart.jpg" onclick="gamesSuperNintendo.jogarMarioKart()">
+            </div>
+            <div class="item superNintendo superMarioWorld">
+                <img class="box-filme" src="img/superNintendo/superMarioWorld.jpg" onclick="gamesSuperNintendo.jogarMarioWorld()">
+            </div>
+            <div class="item superNintendo superMetroid">
+                <img class="box-filme" src="img/superNintendo/superMetroid.jpg" onclick="gamesSuperNintendo.jogarMetroid()">
+            </div>
+            <div class="item superNintendo superstarSoccerDeluxe">
+                <img class="box-filme" src="img/superNintendo/superstarSoccerDeluxe.jpg" onclick="gamesSuperNintendo.jogarSuperstarSoccer()">
+            </div>
+            <div class="item superNintendo theLegendOfZelda">
+                <img class="box-filme" src="img/superNintendo/theLegendOfZelda.jpg" onclick="gamesSuperNintendo.jogarTheLegendOfZelda()">
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="info">
+                <div class="modal_logo">
+                    <img src="/img/megaDrive/logoSonic.png" alt="logo Sonic" width="130px" height="70px">
+                </div>
+                <ul class="ulSonic">
+                    <li><i class="fas fa-arrow-alt-circle-right"></i><b>Plataforma:</b> Sega Mega Drive</li>
+                    <li><i class="fas fa-arrow-alt-circle-right"></i><b>Desenvolvedor:</b> Sega</li>
+                    <li><i class="fas fa-arrow-alt-circle-right"></i><b>Data de lançamento:</b> 23/06/1991</li>
+                    <li><i class="fas fa-arrow-alt-circle-right"></i><b>Número de Jogadores:</b> 1</li>
+                    <li><i class="fas fa-arrow-alt-circle-right"></i><b>Co-op:</b> não</li>
+                </ul>
+                <p><b>Curiosidades:</b> A famosa tela inicial do jogo, que apresentava o logo da Sega, uma introdução do personagem e algumas amostras das fases, ocupava 1/8 do cartucho!
+                   Isso deixava cerca de 300 KB de espaço para o restante do jogo.</p>
+                <div class="modalButton">
+                    <button onclick="Modal.close()">Voltar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://kit.fontawesome.com/26a64b4131.js" crossorigin="anonymous"></script>
     <script src="js/owl/jquery.min.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/setup.js"></script>
+    <script src="js/owl/main.js"></script>
 </body>
 </html>

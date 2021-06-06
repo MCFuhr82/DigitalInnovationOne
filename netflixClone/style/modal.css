@@ -1,0 +1,70 @@
+/* MODAL ==================== */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.modal {
+    background-color: #f0f2f5;
+    background-image: linear-gradient(to bottom right, #0e0a18, #0017bb, #0068ff, #9ecbe8, #fffdff);
+    padding: 2.4rem;
+    position: relative; /* para a caixa que abrir da nova transação ficar na frente de todas. Teve que fazer o ajuste no z-index aqui e no modal-overlay */
+    z-index: 1;
+    width: 400px;
+    height: 430px;
+    color: #0e0a18;
+    font-size: 17px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ulSonic {
+    list-style: none;
+    margin-top: 10px;
+   
+}
+
+.ulSonic i {
+    margin-right: 5px;
+}
+
+.info p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modalButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info button {
+    background-color: #cc0000;
+    padding: 8px 4px;
+    width: 100px;
+    border: none;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 0.9;
+    visibility: visible;
+}
