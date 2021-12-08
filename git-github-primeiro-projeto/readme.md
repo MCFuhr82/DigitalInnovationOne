@@ -1,5 +1,12 @@
-Projeto para o Bootcamp HTML WEB Developer da Digital Innovation One
+# Desafio de Projeto: criar repositório no Git/Github. 🥇
 
+Conhecimento e experiência adquirida:
 
-Criando a página inicial do Instagram, trabalhando apenas com HTML e CSS
-Experiência adquirida em **Flexbox** e **Responsividade** - @Media
+👍 **Criar repositório**: criado direto no Github
+
+👍 **Adicionar Readme**: 
+
+👍 **Criar pasta no windows e clonar**: usando terminal gitbash
+
+👍 **Git Add, Commit e Push**: pelo Gitbash
+
